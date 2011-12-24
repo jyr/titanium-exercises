@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="language">Languaje</string>
+    <string name="test">Prueba</string>
+    <string name="tab">Pestaña</string>
+    <string name="January">enero</string>
+  	<string name="February">febrero</string>
+  	<string name="March">marzo</string>
+  	<string name="April">abril</string>
+  	<string name="May">mayo</string>
+  	<string name="June">junio</string>
+  	<string name="July">julio</string>
+  	<string name="August">agosto</string>
+  	<string name="September">septiembre</string>
+  	<string name="October">octubre</string>
+  	<string name="November">noviembre</string>
+  	<string name="December">diciembre</string>
+</resources>
