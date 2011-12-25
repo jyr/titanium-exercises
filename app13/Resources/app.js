@@ -42,7 +42,7 @@ var tv = {};
 			});
 			
 			var leftImage = Ti.UI.createImageView({
-				image: (_params.rownum % 2 === 0) ? 'images/imageA.png' : 'images/imageB.png',
+				image: (_params.rownum % 2 == 0) ? 'images/imageA.png' : 'images/imageB.png',
 				height: 64,
 				left:10,
 				width:64,
@@ -86,7 +86,8 @@ var tv = {};
 				width:25,
 				height:22,
 				right:10,
-				top:30
+				top:30,
+				myimage: 'blue'
 			});
 			row.add(rightImage);
 			
@@ -101,14 +102,14 @@ var tv = {};
 				rownum: i, 
 				primarylabel: 'This is a row ' + i,
 				secondarylabel: 'Subtitle ' + i,
-				myImage: (i % 2 === 0) ? 'a' : 'b'
+				myimage: (i % 2 == 0) ? 'a' : 'b'
 			}));
 		}
 		tbldata.push(makeRow({
 			rownum: 'last', 
 			primarylabel: 'This is the last row ',
 			secondarylabel: 'The last subtitle ',
-			myImage: 'c'
+			myimage: 'c'
 		}));
 		// define the tableview and assign its data/rows here
 		var table = Ti.UI.createTableView({
@@ -133,19 +134,22 @@ var tv = {};
 				case 'a':
 					e.source.image = 'images/imageB.png';
 					e.source.myimage = 'b';
-					Ti.API.info('LOGGER ' + e.source.myimage);
 				break;
 				case 'b':
-					
+					e.source.image = 'images/imageC.png';
+					e.source.myimage = 'c';
 				break;
 				case 'c':
-					
+					e.source.image = 'images/imageA.png';
+					e.source.myimage = 'a';
 				break;
 				case 'red':
-					
+					e.source.image = 'images/notificationUnreadBadge.png';
+					e.source.myimage = 'blue';
 				break;
 				case 'blue':
-					
+					e.source.image = 'images/notificationBadge.png';
+					e.source.myimage = 'red';
 				break;
 			}
 		});
